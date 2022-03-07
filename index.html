@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="./index.css">
+</head>
+<body>
+    <section class="container">
+        <div class="calculator">
+            <input type="text" id="value" class="value" value="0">
+            <span class="input-error" id="input-error"></span>
+            <div class="buttons" id="buttons">
+                <!-- first row -->
+                <button class="btn clear operators" id="clear" onclick="onClickClear()">C</button>
+                <button class="btn modulous operators" id="modulous " onclick="onClickBtns(id)">%</button>
+                <button class="btn delete operators" id="delete" onclick="onClickDelete()"><i class="fa-solid fa-delete-left"></i></button>
+                <button class="btn division operators" id="division " onclick="onClickBtns(id)">/</button>
+
+                <!-- Second row -->
+                <button class="btn number" id="seven" onclick="onClickBtns(id)">7</button>
+                <button class="btn number" id="eight" onclick="onClickBtns(id)">8</button>
+                <button class="btn number" id="nine" onclick="onClickBtns(id)">9</button>
+                <button class="btn number operators" id="multiply " onclick="onClickBtns(id)">x</button>
+
+                <!-- Third row -->
+                <button class="btn number" id="four" onclick="onClickBtns(id)">4</button>
+                <button class="btn number" id="five" onclick="onClickBtns(id)">5</button>
+                <button class="btn number" id="six" onclick="onClickBtns(id)">6</button>
+                <button class="btn number operators" id="subtraction " onclick="onClickBtns(id)">-</button>
+
+                <!-- Third row -->
+                <button class="btn number" id="one" onclick="onClickBtns(id)">1</button>
+                <button class="btn number" id="two" onclick="onClickBtns(id)">2</button>
+                <button class="btn number" id="three" onclick="onClickBtns(id)">3</button>
+                <button class="btn number operators" id="addition " onclick="onClickBtns(id)">+</button>
+
+                <!-- Fourth row -->
+                <button class="btn number" id="dot" onclick="onClickBtns(id)">.</button>
+                <button class="btn number" id="zero" onclick="onClickBtns(id)">0</button>
+                <button class="btn power operators" id="power " onclick="onClickBtns(id)">^</button>
+                <button class="btn equal operators" id="equal" onclick="onClickEqual()">=</button>
+
+            </div>
+        </div>
+        <div class="history-cont">
+            <h1 class="history-text">History</h1>
+            <ol id="history"></ol>
+        </div>
+    </section>
+    <script src="./index.js"></script>
+</body>
+</html>
