@@ -2,6 +2,7 @@ let inputEle = document.getElementById("value")
 let buttonsContEle = document.getElementById("buttons")
 let inputErrorEle = document.getElementById("input-error")
 let unOrderListEle = document.getElementById("history")
+let clearBtnEle = document.getElementById("clear-btn")
 
 let output = ""
 let liData = ""
@@ -54,3 +55,7 @@ function onClickDelete() {
         console.log( output)
     }
 }
+
+clearBtnEle.addEventListener("click", function(){
+    unOrderListEle.innerHTML = ""
+})
